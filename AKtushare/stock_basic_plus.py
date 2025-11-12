@@ -61,9 +61,10 @@ if __name__ == '__main__':
     pd.set_option("display.max_columns", None)
     # 显示所有行
     # pd.set_option('display.max_rows', None)
+    db_path = r'D:\develops\python\aktushare.db'
 
     print_hi('PyCharm')
-    db_path = r'D:\develops\python\aktushare.db'
+
     # 连接数据库:ml-citation{ref="3,6" data="citationList"}
     conn = sqlite3.connect(db_path)
     cursor = conn.cursor()

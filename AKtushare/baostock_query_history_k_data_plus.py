@@ -46,7 +46,8 @@ def df_to_sqlite(df, table_name, db_name, if_exists, index=False):
 
 
 if __name__ == "__main__":
-    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf8")  # 强制标准输出UTF-8编码
+    sys.stdout = io.TextIOWrapper(
+        sys.stdout.buffer, encoding="utf8")  # 强制标准输出UTF-8编码
     # 对pandas配置，列名与数据对其显示
     pd.set_option("display.unicode.ambiguous_as_wide", True)
     pd.set_option("display.unicode.east_asian_width", True)
@@ -54,6 +55,10 @@ if __name__ == "__main__":
     pd.set_option("display.max_columns", None)
     # 显示所有行
     # pd.set_option('display.max_rows', None)
+    db_path = r'D:\develops\python\aktushare.db'
+
+    print_hi("PyCharm")
+
     #### 登陆系统 ####
     lg = bs.login()
     # 显示登陆返回信息
@@ -62,22 +67,28 @@ if __name__ == "__main__":
     today = datetime.now().strftime("%Y%m%d")
     print(today)
     db_path = r'D:\develops\python\aktushare.db'
-    conn = sqlite3.connect(db_path)  # 连接数据库:ml-citation{ref="3,6" data="citationList"}
+    # 连接数据库:ml-citation{ref="3,6" data="citationList"}
+    conn = sqlite3.connect(db_path)
     cursor = conn.cursor()
-    cursor.execute("SELECT * FROM stock_days where days <=" + today)  # 执行查询:ml-citation{ref="10" data="citationList"}
+    # 执行查询:ml-citation{ref="10" data="citationList"}
+    cursor.execute("SELECT * FROM stock_days where days <=" + today)
     rows = cursor.fetchall()  # 获取所有结果:ml-citation{ref="6" data="citationList"}
     conn.close()  # 关闭连接:ml-citation{ref="8" data="citationList"}
     df_days = pd.DataFrame(rows, columns=["days"])
     daybefore1 = df_days["days"].iloc[-1]
 
-    conn = sqlite3.connect(db_path)  # 连接数据库:ml-citation{ref="3,6" data="citationList"}
+    # 连接数据库:ml-citation{ref="3,6" data="citationList"}
+    conn = sqlite3.connect(db_path)
     cursor = conn.cursor()
-    cursor.execute("SELECT * FROM stock_basic_plus")  # 执行查询:ml-citation{ref="10" data="citationList"}
+    # 执行查询:ml-citation{ref="10" data="citationList"}
+    cursor.execute("SELECT * FROM stock_basic_plus")
     rows = cursor.fetchall()  # 获取所有结果:ml-citation{ref="6" data="citationList"}
     conn.close()  # 关闭连接:ml-citation{ref="8" data="citationList"}
-    df = pd.DataFrame(rows, columns=["code", "name", "ak_code", "tu_code", "bao_code"])
+    df = pd.DataFrame(
+        rows, columns=["code", "name", "ak_code", "tu_code", "bao_code"])
     df["peTTM"] = 0
-    select_day = daybefore1[0:4] + "-" + daybefore1[4:6] + "-" + daybefore1[6:8]
+    select_day = daybefore1[0:4] + "-" + \
+        daybefore1[4:6] + "-" + daybefore1[6:8]
     df["date"] = select_day
     print(select_day)
     #### 获取历史K线数据 ####
@@ -105,7 +116,8 @@ if __name__ == "__main__":
 # print(data_list)
 df_output = pd.DataFrame(data_list, columns=rs.fields)
 #### 结果集输出到csv文件 ####
-df_to_sqlite(df=df_output, table_name="stock_basic_peTTM", db_name="aktushare.db", if_exists="replace", )
+df_to_sqlite(df=df_output, table_name="stock_basic_peTTM",
+             db_name=db_path, if_exists="replace", )
 
 #### 登出系统 ####
 bs.logout()

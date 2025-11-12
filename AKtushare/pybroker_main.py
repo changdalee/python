@@ -6,13 +6,15 @@ from sqlite3 import OperationalError
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    #对pandas配置，列名与数据对其显示
+    # 对pandas配置，列名与数据对其显示
     pd.set_option('display.unicode.ambiguous_as_wide', True)
     pd.set_option('display.unicode.east_asian_width', True)
     # 显示所有列
     pd.set_option('display.max_columns', None)
     # 显示所有行
-    #pd.set_option('display.max_rows', None)
+
+    db_path = r'D:\develops\python\aktushare.db'
+    # pd.set_option('display.max_rows', None)
     pybroker.enable_data_source_cache('AKShare')
     akshare = AKShare()
     # You can substitute 000001.SZ with 000001, and it will still work!

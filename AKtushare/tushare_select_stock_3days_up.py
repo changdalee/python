@@ -9,6 +9,7 @@ import io
 import sys
 import os
 
+
 def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
     print(f"Hi, {name}")  # Press F9 to toggle the breakpoint.
@@ -45,12 +46,12 @@ def df_to_sqlite(df, table_name, db_name, if_exists, index=False):
         print(f"发生错误: {str(e)}")
         return False
 
-def export_to_ths_txt(df, group_name='myselect_stocks'):
 
+def export_to_ths_txt(df, group_name='myselect_stocks'):
     """导出为同花顺TXT格式"""
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     filename = f"{group_name}_{timestamp}.txt"
-    #current_path = os.getcwd()
+    # current_path = os.getcwd()
     current_path = "D:\\"
     filepath = os.path.join(current_path, filename)
     print(f"正在导出文件到: {filepath}...")
@@ -65,6 +66,7 @@ def export_to_ths_txt(df, group_name='myselect_stocks'):
     print(f"✅ 成功导出 {len(formatted_codes)} 只股票到: {filepath}")
     return filepath
 
+
 if __name__ == "__main__":
     sys.stdout = io.TextIOWrapper(
         sys.stdout.buffer, encoding="utf8"
@@ -76,6 +78,7 @@ if __name__ == "__main__":
     pd.set_option("display.max_columns", None)
     # 显示所有行
     # pd.set_option('display.max_rows', None)
+    db_path = r'D:\develops\python\aktushare.db'
 
     token = "055680ead4592f1287876ef50197e46a76516c86268a33b8c0c565b0"
     ts.set_token(token)
@@ -85,7 +88,7 @@ if __name__ == "__main__":
 
     today = datetime.now().strftime("%Y%m%d")
     conn = sqlite3.connect(
-        "akshare.db"
+        db_path
     )  # 连接数据库:ml-citation{ref="3,6" data="citationList"}
     cursor = conn.cursor()
     cursor.execute(
@@ -107,12 +110,12 @@ if __name__ == "__main__":
     time.sleep(5)
     df_daybf3 = pro.daily(trade_date=daybefore3).fillna(0)
 
-    df_bf1 = df_daybf1[["ts_code", "vol","open", "close"]]
-    df_bf1.columns = ["ts_code", "vol_bf1", "open_bf1","close_bf1"]
-    df_bf2 = df_daybf2[["ts_code", "vol", "open","close"]]
-    df_bf2.columns = ["ts_code", "vol_bf2", "open_bf2","close_bf2"]
-    df_bf3 = df_daybf3[["ts_code", "vol", "open","close"]]
-    df_bf3.columns = ["ts_code", "vol_bf3","open_bf3", "close_bf3"]
+    df_bf1 = df_daybf1[["ts_code", "vol", "open", "close"]]
+    df_bf1.columns = ["ts_code", "vol_bf1", "open_bf1", "close_bf1"]
+    df_bf2 = df_daybf2[["ts_code", "vol", "open", "close"]]
+    df_bf2.columns = ["ts_code", "vol_bf2", "open_bf2", "close_bf2"]
+    df_bf3 = df_daybf3[["ts_code", "vol", "open", "close"]]
+    df_bf3.columns = ["ts_code", "vol_bf3", "open_bf3", "close_bf3"]
 
     df = pd.merge(df_bf1, df_bf2, on="ts_code", how="left")
     df = pd.merge(df, df_bf3, on="ts_code", how="left")
@@ -126,7 +129,7 @@ if __name__ == "__main__":
     df = df.drop(df[df["vol_bf2"] < 1].index)
     df = df.drop(df[df["vol_bf3"] < 1].index)
 
-    df = df.drop(df[df["open_bf1"] >df["close_bf1"] ].index)
+    df = df.drop(df[df["open_bf1"] > df["close_bf1"]].index)
     df = df.drop(df[df["open_bf2"] > df["close_bf2"]].index)
     df = df.drop(df[df["open_bf3"] > df["close_bf3"]].index)
 
@@ -147,7 +150,7 @@ if __name__ == "__main__":
     print("\n" + "_" * 99 + "\n")
 
     conn = sqlite3.connect(
-        "akshare.db"
+        db_path
     )  # 连接数据库:ml-citation{ref="3,6" data="citationList"}
     cursor = conn.cursor()
     cursor.execute(
@@ -199,8 +202,7 @@ if __name__ == "__main__":
     df_to_sqlite(
         df=df,
         table_name="tushare_select_3days_up",
-        db_name="akshare.db",
+        db_name=db_path,
         if_exists="replace",
     )
     export_to_ths_txt(df)
-    

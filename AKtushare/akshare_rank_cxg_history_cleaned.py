@@ -3,9 +3,11 @@ import pandas as pd
 import sqlite3
 from sqlite3 import OperationalError
 
+
 def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
     print(f'Hi, {name}')  # Press F9 to toggle the breakpoint.
+
 
 def df_to_sqlite(df, table_name, db_name, if_exists, index=False):
     """
@@ -52,30 +54,33 @@ def df_to_sqlite(df, table_name, db_name, if_exists, index=False):
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    #对pandas配置，列名与数据对其显示
+    # 对pandas配置，列名与数据对其显示
     pd.set_option('display.unicode.ambiguous_as_wide', True)
     pd.set_option('display.unicode.east_asian_width', True)
     # 显示所有列
     pd.set_option('display.max_columns', None)
     # 显示所有行
-    #pd.set_option('display.max_rows', None)
+    # pd.set_option('display.max_rows', None)
+
+    db_path = r'D:\develops\python\aktushare.db'
 
     print_hi('PyCharm')
 
-
-    #创月新高股票，symbol="创月新高"; choice of {"创月新高", "半年新高", "一年新高", "历史新高"}
+    # 创月新高股票，symbol="创月新高"; choice of {"创月新高", "半年新高", "一年新高", "历史新高"}
     stock_rank_cxg_ths_df = ak.stock_rank_cxg_ths(symbol="一年新高")
     print(stock_rank_cxg_ths_df)
-    df=stock_rank_cxg_ths_df
+    df = stock_rank_cxg_ths_df
 
     df = df.fillna(0)  # 填充所有NaN为0
 
     # 方法1: 直接通过列名列表选择（最常用）
-    selected_cols = ['股票代码', '股票简称', '最新价','前期高点','前期高点日期']
+    selected_cols = ['股票代码', '股票简称', '最新价', '前期高点', '前期高点日期']
     df1 = df[selected_cols]
-    df = df1.rename(columns={'股票代码': 'code', '股票简称': 'name', '最新价': 'current','前期高点':'pre_high','前期高点日期':'pre_day'})
+    df = df1.rename(columns={'股票代码': 'code', '股票简称': 'name',
+                    '最新价': 'current', '前期高点': 'pre_high', '前期高点日期': 'pre_day'})
 
-    df = df[df['name'].apply(lambda x: 'ST' not in str(x) and '*ST' not in str(x) and 'PT' not in str(x) and '退' not in str(x))]
+    df = df[df['name'].apply(lambda x: 'ST' not in str(
+        x) and '*ST' not in str(x) and 'PT' not in str(x) and '退' not in str(x))]
 
     print(df)
     print("\n" + "_" * 80 + "\n")

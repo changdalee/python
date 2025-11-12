@@ -77,6 +77,8 @@ if __name__ == "__main__":
     ts.set_token(token)
     # print(ts.__version__)
 
+    db_path = r'D:\develops\python\aktushare.db'
+
     print_hi("PyCharm")
 
     today = datetime.now().strftime("%Y%m%d")
@@ -128,6 +130,6 @@ if __name__ == "__main__":
     df_to_sqlite(
         df=df,
         table_name="tushare_stock_daily_" + day_saved,
-        db_name="akshare.db",
+        db_name=db_path,
         if_exists="replace",
     )

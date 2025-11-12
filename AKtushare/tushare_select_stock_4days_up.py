@@ -79,6 +79,7 @@ if __name__ == "__main__":
     # 显示所有行
     # pd.set_option('display.max_rows', None)
 
+    db_path = r'D:\develops\python\aktushare.db'
     token = "055680ead4592f1287876ef50197e46a76516c86268a33b8c0c565b0"
     ts.set_token(token)
     # print(ts.__version__)
@@ -87,7 +88,7 @@ if __name__ == "__main__":
 
     today = datetime.now().strftime("%Y%m%d")
     conn = sqlite3.connect(
-        "aktushare.db"
+        db_path
     )  # 连接数据库:ml-citation{ref="3,6" data="citationList"}
     cursor = conn.cursor()
     cursor.execute(
@@ -177,7 +178,7 @@ if __name__ == "__main__":
     print("\n" + "_" * 99 + "\n")
 
     conn = sqlite3.connect(
-        "akshare.db"
+        db_path
     )  # 连接数据库:ml-citation{ref="3,6" data="citationList"}
     cursor = conn.cursor()
     cursor.execute(
@@ -235,7 +236,7 @@ if __name__ == "__main__":
     df_to_sqlite(
         df=df,
         table_name="tushare_select_4days_up",
-        db_name="aktushare.db",
+        db_name=db_path,
         if_exists="replace",
     )
     export_to_ths_txt(df)

@@ -65,6 +65,7 @@ if __name__ == "__main__":
     # 显示所有行
     # pd.set_option('display.max_rows', None)
 
+    db_path = r'D:\develops\python\aktushare.db'
     token = "055680ead4592f1287876ef50197e46a76516c86268a33b8c0c565b0"
     ts.set_token(token)
     # print(ts.__version__)
@@ -72,7 +73,7 @@ if __name__ == "__main__":
     print_hi("PyCharm")
 
     conn = sqlite3.connect(
-        "akshare.db"
+        db_path
     )  # 连接数据库:ml-citation{ref="3,6" data="citationList"}
     cursor = conn.cursor()
     cursor.execute(
@@ -97,7 +98,8 @@ if __name__ == "__main__":
     df_current = stock_zh_a_spot_em_df.fillna(0)
     # print(df_current)
 
-    df_current = df_current[df_current["代码"].apply(lambda x: not str(x) > "687999")]
+    df_current = df_current[df_current["代码"].apply(
+        lambda x: not str(x) > "687999")]
     selected_cols = [
         "代码",
         "名称",
@@ -132,14 +134,16 @@ if __name__ == "__main__":
         )
     ]
 
-    df_current = df_current[df_current["code"].apply(lambda x: not str(x) > "687999")]
+    df_current = df_current[df_current["code"].apply(
+        lambda x: not str(x) > "687999")]
     df_current = df_current.drop(df_current[df_current["current"] < 2].index)
 
     pro = ts.pro_api()
     df_yesterday = pro.daily(trade_date=before_day01).fillna(0)
     df_yesterday["code"] = df_yesterday["ts_code"].apply(lambda x: x[:6])
     # print(df_yesterday)
-    df_yesterday = df_yesterday.drop(df_yesterday[df_yesterday["vol"] < 1].index)
+    df_yesterday = df_yesterday.drop(
+        df_yesterday[df_yesterday["vol"] < 1].index)
     df = pd.merge(df_current, df_yesterday, on="code", how="left")
 
     print(df)
@@ -179,7 +183,7 @@ if __name__ == "__main__":
     df_to_sqlite(
         df=df,
         table_name="tushare_select_stock_zh_current_01",
-        db_name="akshare.db",
+        db_name=db_path,
         if_exists="replace",
     )
     print("数据存储完成")

@@ -14,6 +14,10 @@ if __name__ == "__main__":
     pd.set_option("display.max_columns", None)
     # 显示所有行
     # pd.set_option('display.max_rows', None)
+    db_path = r'D:\develops\python\aktushare.db'
+
+    print_hi("PyCharm")
+
     #### 登陆系统 ####
     lg = bs.login()
     # 显示登陆返回信息
@@ -23,9 +27,9 @@ if __name__ == "__main__":
     #### 获取历史K线数据 ####
     # 详细指标参数，参见“历史行情指标参数”章节
     rs = bs.query_history_k_data_plus("sh.600000",
-        "date,code,close,peTTM,isST",
-        start_date='2025-11-07', end_date='2025-11-07',
-        frequency="d", adjustflag="3") #frequency="d"取日k线，adjustflag="3"默认不复权
+                                      "date,code,close,peTTM,isST",
+                                      start_date='2025-11-07', end_date='2025-11-07',
+                                      frequency="d", adjustflag="3")  # frequency="d"取日k线，adjustflag="3"默认不复权
     print('query_history_k_data_plus respond error_code:'+rs.error_code)
     print('query_history_k_data_plus respond  error_msg:'+rs.error_msg)
 

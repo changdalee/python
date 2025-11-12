@@ -57,6 +57,7 @@ if __name__ == "__main__":
     pd.set_option("display.max_columns", None)
     # 显示所有行
     pd.set_option("display.max_rows", None)
+    db_path = r'D:\develops\python\aktushare.db'
 
     print_hi("PyCharm")
 
@@ -83,11 +84,11 @@ if __name__ == "__main__":
 
     # 存储到SQLite数据库
     df_to_sqlite(
-        df=df, table_name="stock_days", db_name="akshare.db", if_exists="replace"
+        df=df, table_name="stock_days", db_name=db_path, if_exists="replace"
     )
 
     conn = sqlite3.connect(
-        "akshare.db"
+        db_path
     )  # 连接数据库:ml-citation{ref="3,6" data="citationList"}
     cursor = conn.cursor()
     cursor.execute(

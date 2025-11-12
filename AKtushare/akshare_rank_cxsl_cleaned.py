@@ -3,9 +3,11 @@ import pandas as pd
 import sqlite3
 from sqlite3 import OperationalError
 
+
 def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
     print(f'Hi, {name}')  # Press F9 to toggle the breakpoint.
+
 
 def df_to_sqlite(df, table_name, db_name, if_exists, index=False):
     """
@@ -52,16 +54,17 @@ def df_to_sqlite(df, table_name, db_name, if_exists, index=False):
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    #对pandas配置，列名与数据对其显示
+    # 对pandas配置，列名与数据对其显示
     pd.set_option('display.unicode.ambiguous_as_wide', True)
     pd.set_option('display.unicode.east_asian_width', True)
     # 显示所有列
     pd.set_option('display.max_columns', None)
     # 显示所有行
-    #pd.set_option('display.max_rows', None)
+    # pd.set_option('display.max_rows', None)
+
+    db_path = r'D:\develops\python\aktushare.db'
 
     print_hi('PyCharm')
-
 
     # 技术选股-持续缩量
     stock_rank_cxsl_ths_df = ak.stock_rank_cxsl_ths()
@@ -71,11 +74,13 @@ if __name__ == '__main__':
     df = df.fillna(0)  # 填充所有NaN为0
 
     # 方法1: 直接通过列名列表选择（最常用）
-    selected_cols = ['股票代码', '股票简称', '最新价','缩量天数','所属行业']
+    selected_cols = ['股票代码', '股票简称', '最新价', '缩量天数', '所属行业']
     df1 = df[selected_cols]
-    df = df1.rename(columns={'股票代码': 'code', '股票简称': 'name', '最新价': 'current','放量天数':'fl_days','所属行业':'industry'})
+    df = df1.rename(columns={'股票代码': 'code', '股票简称': 'name',
+                    '最新价': 'current', '放量天数': 'fl_days', '所属行业': 'industry'})
 
-    df = df[df['name'].apply(lambda x: 'ST' not in str(x) and '*ST' not in str(x) and 'PT' not in str(x) and '退' not in str(x))]
+    df = df[df['name'].apply(lambda x: 'ST' not in str(
+        x) and '*ST' not in str(x) and 'PT' not in str(x) and '退' not in str(x))]
 
     print(df)
     print("\n" + "_" * 80 + "\n")

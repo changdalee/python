@@ -64,6 +64,8 @@ if __name__ == '__main__':
     # 显示所有行
     # pd.set_option('display.max_rows', None)
 
+    db_path = r'D:\develops\python\aktushare.db'
+
     print_hi('PyCharm')
 
     db_path = r'D:\develops\python\aktushare.db'
