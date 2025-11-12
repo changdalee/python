@@ -66,6 +66,7 @@ if __name__ == "__main__":
     print_hi("PyCharm")
 
     current_hour = datetime.now().hour
+
     today = datetime.now().strftime("%Y%m%d")
     print(f"today=", today)
     print("current_hour=", current_hour)
