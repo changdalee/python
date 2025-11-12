@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="14e9a758-a9ff-4216-9fb0-c0557cad85c6" name="Changes" comment="20250717">
+      <change beforePath="$PROJECT_DIR$/操作铁律.txt" beforeDir="false" afterPath="$PROJECT_DIR$/操作铁律.txt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="changdalee &lt;16923071@qq.com&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2zUKw7jJFp3LFABgvD8AtDHypY5" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.akshare_stock_capital_flow_now.executor&quot;: &quot;Run&quot;,
+    &quot;Python.akshare_stock_daily.executor&quot;: &quot;Run&quot;,
+    &quot;Python.create_database (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.create_database.executor&quot;: &quot;Run&quot;,
+    &quot;Python.database (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.database.executor&quot;: &quot;Run&quot;,
+    &quot;Python.initial_volsma_zh_a.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.open_database.executor&quot;: &quot;Run&quot;,
+    &quot;Python.pybroker_main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.save_rank_cxfl_cleaned.executor&quot;: &quot;Run&quot;,
+    &quot;Python.save_rank_cxg_history_cleaned.executor&quot;: &quot;Run&quot;,
+    &quot;Python.save_rank_cxsl_cleaned.executor&quot;: &quot;Run&quot;,
+    &quot;Python.save_rank_ljqs_cleaned.executor&quot;: &quot;Run&quot;,
+    &quot;Python.save_rank_xstp10_cleaned.executor&quot;: &quot;Run&quot;,
+    &quot;Python.save_rank_xstp20_cleaned.executor&quot;: &quot;Run&quot;,
+    &quot;Python.save_rank_xstp250_cleaned.executor&quot;: &quot;Run&quot;,
+    &quot;Python.save_rank_xstp30_cleaned.executor&quot;: &quot;Run&quot;,
+    &quot;Python.save_rank_xstp500_cleaned.executor&quot;: &quot;Run&quot;,
+    &quot;Python.save_rank_xstp5_cleaned.executor&quot;: &quot;Run&quot;,
+    &quot;Python.save_rank_xstp60_cleaned.executor&quot;: &quot;Run&quot;,
+    &quot;Python.save_rank_xstp90_cleaned.executor&quot;: &quot;Run&quot;,
+    &quot;Python.save_stock_basic.executor&quot;: &quot;Run&quot;,
+    &quot;Python.save_stock_bj_a_cleaned.executor&quot;: &quot;Run&quot;,
+    &quot;Python.save_stock_board_industry.executor&quot;: &quot;Run&quot;,
+    &quot;Python.save_stock_north_money_cleaned.executor&quot;: &quot;Run&quot;,
+    &quot;Python.save_stock_sh_a_cleaned.executor&quot;: &quot;Run&quot;,
+    &quot;Python.save_stock_sz_a_cleaned.executor&quot;: &quot;Run&quot;,
+    &quot;Python.save_stock_zh_a_cleaned.executor&quot;: &quot;Run&quot;,
+    &quot;Python.save_stock_zh_a_new_cleaned.executor&quot;: &quot;Run&quot;,
+    &quot;Python.save_stock_zh_basic.executor&quot;: &quot;Run&quot;,
+    &quot;Python.select_stock_zh_a.executor&quot;: &quot;Run&quot;,
+    &quot;Python.select_stock_zh_a_01.executor&quot;: &quot;Run&quot;,
+    &quot;Python.select_stock_zh_a_02.executor&quot;: &quot;Run&quot;,
+    &quot;Python.select_stock_zh_a_up2to5.executor&quot;: &quot;Run&quot;,
+    &quot;Python.stock_days.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ta_lib_test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.tushare_main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.tushare_select_stock_zh_a_01.executor&quot;: &quot;Run&quot;,
+    &quot;Python.tushare_select_stock_zh_close_01.executor&quot;: &quot;Run&quot;,
+    &quot;Python.tushare_select_stock_zh_current_01.executor&quot;: &quot;Run&quot;,
+    &quot;Python.tushare_stock_daily_zh_a.executor&quot;: &quot;Run&quot;,
+    &quot;Python.tushare_test.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/develops/python/AKshare&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="PyCoverageOptionsProvider">
+    <option name="myUseBundledCoveragePy" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\develops\python\AKshare" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\develops\python\AKshare" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="create_database (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="AKshare" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/create_database.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="create_database" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="AKshare" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/akshare" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/create_database.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="create_database" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="AKshare" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="D:\develops\python\AKshare\create_database.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="AKshare" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="open_database" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="AKshare" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/open_database.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ta_lib_test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="AKshare" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ta_lib_test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.create_database (1)" />
+      <item itemvalue="Python.create_database" />
+      <item itemvalue="Python.main" />
+      <item itemvalue="Python.open_database" />
+      <item itemvalue="Python.ta_lib_test" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.ta_lib_test" />
+        <item itemvalue="Python.create_database" />
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.create_database (1)" />
+        <item itemvalue="Python.open_database" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-09060db00ec0-JavaScript-PY-251.26927.90" />
+        <option value="bundled-python-sdk-41e8cd69c857-64d779b69b7a-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.26927.90" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="14e9a758-a9ff-4216-9fb0-c0557cad85c6" name="Changes" comment="" />
+      <created>1751780446392</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1751780446392</updated>
+      <workItem from="1751780447404" duration="2621000" />
+      <workItem from="1751783786910" duration="154000" />
+      <workItem from="1751784104852" duration="332000" />
+      <workItem from="1751784469194" duration="209000" />
+      <workItem from="1751784971671" duration="116000" />
+      <workItem from="1751785790046" duration="1451000" />
+      <workItem from="1751787267465" duration="5041000" />
+      <workItem from="1751794927467" duration="5202000" />
+      <workItem from="1751857725359" duration="6206000" />
+      <workItem from="1751891819408" duration="4002000" />
+      <workItem from="1751937981078" duration="5317000" />
+      <workItem from="1751954214999" duration="2632000" />
+      <workItem from="1751957869806" duration="135000" />
+      <workItem from="1751958016232" duration="11057000" />
+      <workItem from="1751981033153" duration="1764000" />
+      <workItem from="1752065396755" duration="1574000" />
+      <workItem from="1752066993721" duration="2139000" />
+      <workItem from="1752075253821" duration="1194000" />
+      <workItem from="1752095000039" duration="509000" />
+      <workItem from="1752095522450" duration="145000" />
+      <workItem from="1752112876371" duration="2919000" />
+      <workItem from="1752495685629" duration="4802000" />
+      <workItem from="1752547694064" duration="8192000" />
+      <workItem from="1752635968640" duration="1256000" />
+      <workItem from="1752641158726" duration="8924000" />
+      <workItem from="1752650730560" duration="7420000" />
+      <workItem from="1752664281175" duration="2994000" />
+      <workItem from="1752738991967" duration="1460000" />
+      <workItem from="1752749703933" duration="3513000" />
+      <workItem from="1752803392087" duration="100000" />
+      <workItem from="1752803502212" duration="112000" />
+      <workItem from="1752803625526" duration="1257000" />
+      <workItem from="1752805419811" duration="3963000" />
+      <workItem from="1752822127681" duration="2830000" />
+      <workItem from="1752891917402" duration="13857000" />
+      <workItem from="1752916052479" duration="5975000" />
+      <workItem from="1752923580038" duration="1769000" />
+      <workItem from="1752974731731" duration="358000" />
+      <workItem from="1753014731585" duration="515000" />
+      <workItem from="1753061952352" duration="2817000" />
+      <workItem from="1753096687176" duration="3902000" />
+      <workItem from="1753146679169" duration="4593000" />
+      <workItem from="1753152780969" duration="8054000" />
+      <workItem from="1753184107847" duration="8501000" />
+      <workItem from="1753235490568" duration="4447000" />
+      <workItem from="1753246779446" duration="1519000" />
+      <workItem from="1753265256625" duration="3383000" />
+      <workItem from="1753272442288" duration="3918000" />
+      <workItem from="1753336883013" duration="244000" />
+      <workItem from="1753495169946" duration="60000" />
+    </task>
+    <task id="LOCAL-00001" summary="20250717">
+      <option name="closed" value="true" />
+      <created>1752827152497</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1752827152497</updated>
+    </task>
+    <task id="LOCAL-00002" summary="20250717">
+      <option name="closed" value="true" />
+      <created>1752827167858</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1752827167858</updated>
+    </task>
+    <task id="LOCAL-00003" summary="20250717">
+      <option name="closed" value="true" />
+      <created>1752827176830</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1752827176830</updated>
+    </task>
+    <task id="LOCAL-00004" summary="20250717">
+      <option name="closed" value="true" />
+      <created>1752827225719</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1752827225719</updated>
+    </task>
+    <task id="LOCAL-00005" summary="20250717">
+      <option name="closed" value="true" />
+      <created>1752827240568</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1752827240568</updated>
+    </task>
+    <task id="LOCAL-00006" summary="20250717">
+      <option name="closed" value="true" />
+      <created>1752827287985</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1752827287985</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="20250717" />
+    <option name="LAST_COMMIT_MESSAGE" value="20250717" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/AKshare$pybroker_main.coverage" NAME="pybroker_main Coverage Results" MODIFIED="1752975369969" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AKshare$akshare_stock_daily.coverage" NAME="akshare_stock_daily Coverage Results" MODIFIED="1753171554011" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AKshare$initial_volsma_zh_a.coverage" NAME="initial_volsma_zh_a Coverage Results" MODIFIED="1752645296208" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AKshare$select_stock_zh_a_up2to5.coverage" NAME="select_stock_zh_a_up2to5 Coverage Results" MODIFIED="1752655914642" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AKshare$save_rank_cxsl_cleaned.coverage" NAME="save_rank_cxsl_cleaned Coverage Results" MODIFIED="1752806747468" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AKshare$save_stock_board_industry.coverage" NAME="save_stock_board_industry Coverage Results" MODIFIED="1752124442165" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AKshare$select_stock_zh_a_02.coverage" NAME="select_stock_zh_a_02 Coverage Results" MODIFIED="1753241726738" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AKshare$save_rank_xstp20_cleaned.coverage" NAME="save_rank_xstp20_cleaned Coverage Results" MODIFIED="1752658096189" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AKshare$stock_days.coverage" NAME="stock_days Coverage Results" MODIFIED="1753157695994" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AKshare$tushare_select_stock_zh_close_01.coverage" NAME="tushare_select_stock_zh_close_01 Coverage Results" MODIFIED="1752920233557" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AKshare$save_stock_basic.coverage" NAME="save_stock_basic Coverage Results" MODIFIED="1752907437095" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AKshare$save_stock_sh_a_cleaned.coverage" NAME="save_stock_sh_a_cleaned Coverage Results" MODIFIED="1752656525935" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AKshare$tushare_stock_daily_zh_a.coverage" NAME="tushare_stock_daily_zh_a Coverage Results" MODIFIED="1753277562281" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AKshare$select_stock_zh_a_01.coverage" NAME="select_stock_zh_a_01 Coverage Results" MODIFIED="1753239680976" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AKshare$save_stock_zh_a_cleaned.coverage" NAME="save_stock_zh_a_cleaned Coverage Results" MODIFIED="1753277783093" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AKshare$tushare_select_stock_zh_current_01.coverage" NAME="tushare_select_stock_zh_current_01 Coverage Results" MODIFIED="1753236372700" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AKshare$database.coverage" NAME="database Coverage Results" MODIFIED="1751891874132" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/akshare" />
+    <SUITE FILE_PATH="coverage/AKshare$save_stock_north_money_cleaned.coverage" NAME="save_stock_north_money_cleaned Coverage Results" MODIFIED="1752068375663" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AKshare$tushare_test.coverage" NAME="tushare_test Coverage Results" MODIFIED="1753266233818" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AKshare$save_rank_xstp30_cleaned.coverage" NAME="save_rank_xstp30_cleaned Coverage Results" MODIFIED="1752665632922" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AKshare$tushare_main.coverage" NAME="tushare_main Coverage Results" MODIFIED="1752898989070" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AKshare$akshare_stock_capital_flow_now.coverage" NAME="akshare_stock_capital_flow_now Coverage Results" MODIFIED="1753277406873" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AKshare$create_database.coverage" NAME="create_database Coverage Results" MODIFIED="1752075291721" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/akshare" />
+    <SUITE FILE_PATH="coverage/AKshare$save_rank_ljqs_cleaned.coverage" NAME="save_rank_ljqs_cleaned Coverage Results" MODIFIED="1752807547387" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AKshare$save_rank_xstp90_cleaned.coverage" NAME="save_rank_xstp90_cleaned Coverage Results" MODIFIED="1751970523350" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AKshare$save_rank_xstp250_cleaned.coverage" NAME="save_rank_xstp250_cleaned Coverage Results" MODIFIED="1751970410651" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AKshare$save_rank_xstp60_cleaned.coverage" NAME="save_rank_xstp60_cleaned Coverage Results" MODIFIED="1751970630924" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AKshare$main.coverage" NAME="main Coverage Results" MODIFIED="1752805493924" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AKshare$save_stock_zh_basic.coverage" NAME="save_stock_zh_basic Coverage Results" MODIFIED="1752907102576" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AKshare$create_database__1_.coverage" NAME="create_database (1) Coverage Results" MODIFIED="1751893216867" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AKshare$save_rank_xstp500_cleaned.coverage" NAME="save_rank_xstp500_cleaned Coverage Results" MODIFIED="1751969796008" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AKshare$save_rank_xstp10_cleaned.coverage" NAME="save_rank_xstp10_cleaned Coverage Results" MODIFIED="1752657864983" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AKshare$tushare_select_stock_zh_a_01.coverage" NAME="tushare_select_stock_zh_a_01 Coverage Results" MODIFIED="1752916528635" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AKshare$select_stock_zh_a.coverage" NAME="select_stock_zh_a Coverage Results" MODIFIED="1752644899340" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AKshare$save_stock_zh_a_new_cleaned.coverage" NAME="save_stock_zh_a_new_cleaned Coverage Results" MODIFIED="1752653672151" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AKshare$database__1_.coverage" NAME="database (1) Coverage Results" MODIFIED="1751891966882" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AKshare$save_rank_cxfl_cleaned.coverage" NAME="save_rank_cxfl_cleaned Coverage Results" MODIFIED="1752805710118" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AKshare$open_database.coverage" NAME="open_database Coverage Results" MODIFIED="1751893011980" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AKshare$save_rank_cxg_history_cleaned.coverage" NAME="save_rank_cxg_history_cleaned Coverage Results" MODIFIED="1752804670954" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AKshare$save_stock_sz_a_cleaned.coverage" NAME="save_stock_sz_a_cleaned Coverage Results" MODIFIED="1752905264232" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AKshare$save_stock_bj_a_cleaned.coverage" NAME="save_stock_bj_a_cleaned Coverage Results" MODIFIED="1751964947071" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AKshare$save_rank_xstp5_cleaned.coverage" NAME="save_rank_xstp5_cleaned Coverage Results" MODIFIED="1752657793207" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AKshare$ta_lib_test.coverage" NAME="ta_lib_test Coverage Results" MODIFIED="1753246898959" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>

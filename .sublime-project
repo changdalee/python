@@ -1,0 +1,19 @@
+{
+    "folders": [
+        {
+            "path": "D:\develops\python",
+            "file_exclude_patterns": ["*.pyc", "__pycache__"],
+            "folder_exclude_patterns": [".git", "venv", "env"]
+        }
+    ],
+    "settings": {
+        "python_interpreter": "D:\develops\python\.venv\Scripts"
+    },
+    "build_systems": [
+        {
+            "name": "Project Tests",
+            "cmd": ["python", "-m", "pytest"]
+        }
+    ]
+}
+
