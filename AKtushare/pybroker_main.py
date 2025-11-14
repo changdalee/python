@@ -13,7 +13,7 @@ if __name__ == '__main__':
     pd.set_option('display.max_columns', None)
     # 显示所有行
 
-    db_path = r'D:\develops\python\aktushare.db'
+    db_path = r'D:\develops\aktushare.db'
     # pd.set_option('display.max_rows', None)
     pybroker.enable_data_source_cache('AKShare')
     akshare = AKShare()

@@ -7,7 +7,7 @@ import sqlite3
 def create_in_memory_db():
     # 使用':memory:'作为特殊标识
     conn = sqlite3.connect(':memory:')
-    db_path = r'D:\develops\python\aktushare.db'
+    db_path = r'D:\develops\aktushare.db'
 
     # 创建示例表
     cursor = conn.cursor()

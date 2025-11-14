@@ -77,7 +77,7 @@ if __name__ == "__main__":
     ts.set_token(token)
     # print(ts.__version__)
 
-    db_path = r'D:\develops\python\aktushare.db'
+    db_path = r'D:\develops\aktushare.db'
 
     print_hi("PyCharm")
 

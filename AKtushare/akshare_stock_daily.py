@@ -64,11 +64,11 @@ if __name__ == '__main__':
     # 显示所有行
     # pd.set_option('display.max_rows', None)
 
-    db_path = r'D:\develops\python\aktushare.db'
+    db_path = r'D:\develops\aktushare.db'
 
     print_hi('PyCharm')
 
-    db_path = r'D:\develops\python\aktushare.db'
+    db_path = r'D:\develops\aktushare.db'
     # 查询所有股票的实时行情数据
     stock_zh_a_spot_em_df = ak.stock_zh_a_spot_em()
     print(stock_zh_a_spot_em_df)
