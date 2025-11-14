@@ -16,7 +16,7 @@ if __name__ == "__main__":
     # pd.set_option('display.max_rows', None)
     db_path = r'D:\develops\aktushare.db'
 
-    print_hi("PyCharm")
+    print("PyCharm")
 
     #### 登陆系统 ####
     lg = bs.login()
