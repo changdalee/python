@@ -20,7 +20,7 @@ def print_hi(name):
     print(f"Hi, {name}")  # Press F9 to toggle the breakpoint.
 
 
-def has_negative(float_list):uv
+def has_negative(float_list):
     for num in float_list:
         if num < 0:
             return True
@@ -55,18 +55,18 @@ def invoice_train(text, df):
     last_month = text.rfind("月")
     # print(last_month - last_year)
     if last_month - last_year > 3:
-        year = text[(last_year - 5) : (last_year - 1)]
+        year = text[(last_year - 5): (last_year - 1)]
         # print(year)
-        month = text[(last_month - 3) : (last_month - 1)]
+        month = text[(last_month - 3): (last_month - 1)]
         # print(month)
-        day = text[(last_month + 2) : (last_month + 4)]
+        day = text[(last_month + 2): (last_month + 4)]
         # print(day)
     else:
-        year = text[(last_year - 4) : (last_year)]
+        year = text[(last_year - 4): (last_year)]
         # print(year)
-        month = text[(last_month - 2) : (last_month)]
+        month = text[(last_month - 2): (last_month)]
         # print(month)
-        day = text[(last_month + 1) : (last_month + 3)]
+        day = text[(last_month + 1): (last_month + 3)]
         # print(day)
 
     pos_fapiao = text.find("发票号码")
@@ -141,9 +141,9 @@ def invoice_train(text, df):
 
 def invoice_highway(text, df):
     last_year = text.rfind("年")
-    fapiao_num = text[(last_year - 13) : (last_year - 5)]
+    fapiao_num = text[(last_year - 13): (last_year - 5)]
     # print(f"fapiao_num：{fapiao_num}")
-    invoice_num = text[(last_year - 26) : (last_year - 14)]
+    invoice_num = text[(last_year - 26): (last_year - 14)]
     # print(f"invoice_num：{invoice_num}")
     year = re.search(r"[\d.-]+年[\d.-]+", text)
     # print(year[0][:4])
@@ -211,15 +211,15 @@ def invoice_highway(text, df):
 
 def invoice_vat(text, df):
     last_year = text.find("年")
-    invoice_num = text[(last_year - 25) : (last_year - 5)]
+    invoice_num = text[(last_year - 25): (last_year - 5)]
     # print(f"invoice_num：{invoice_num}")
     fapiao_num = ""
     # print(f"fapiao_num：{fapiao_num}")
     last_month = text.find("月")
     if last_month - last_year > 3:
-        year = text[(last_year - 5) : (last_year - 1)]
+        year = text[(last_year - 5): (last_year - 1)]
     else:
-        year = text[(last_year - 4) : (last_year)]
+        year = text[(last_year - 4): (last_year)]
     # print(year)
     month = re.findall(r"年\s*(\d{2})", text)
     # print(month[0])
