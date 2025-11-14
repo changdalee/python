@@ -228,7 +228,7 @@ if __name__ == "__main__":
             "close_bf4": "close_bf4",
         }
     )
-    df['PE_ratio'] =
+    df['PE_ratio'] = 0
     df['date'] = today
     print("\n" + "$" * 80 + "\n")
     print(df)
