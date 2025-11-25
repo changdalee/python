@@ -1,9 +1,9 @@
-import akshare as ak
-import pandas as pd
 import sqlite3
 import time
 from sqlite3 import OperationalError
-from datetime import datetime
+
+import akshare as ak
+import pandas as pd
 
 
 def print_hi(name):
@@ -88,7 +88,7 @@ if __name__ == "__main__":
     # 显示所有行
     # pd.set_option('display.max_rows', None)
 
-    db_path = r'D:\develops\aktushare.db'
+    db_path = r"D:\develops\aktushare.db"
 
     print_hi("PyCharm")
 
@@ -101,8 +101,7 @@ if __name__ == "__main__":
     )  # 执行查询:ml-citation{ref="10" data="citationList"}
     rows = cursor.fetchall()  # 获取所有结果:ml-citation{ref="6" data="citationList"}
     conn.close()  # 关闭连接:ml-citation{ref="8" data="citationList"}
-    df = pd.DataFrame(
-        columns=["date", "volume_ratio", "trade_volume", "5d_avg_vol"])
+    df = pd.DataFrame(columns=["date", "volume_ratio", "trade_volume", "5d_avg_vol"])
     for row in rows:
         stock_code = row[0]
         df = calc_volume_ratio(stock_code)

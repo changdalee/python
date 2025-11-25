@@ -6,16 +6,16 @@ import sqlite3
 
 def create_in_memory_db():
     # 使用':memory:'作为特殊标识
-    conn = sqlite3.connect(':memory:')
-    db_path = r'D:\develops\aktushare.db'
+    conn = sqlite3.connect(":memory:")
+    db_path = r"D:\develops\aktushare.db"
 
     # 创建示例表
     cursor = conn.cursor()
     cursor.execute(
-        '''CREATE TABLE IF NOT EXISTS test_table(id INTEGER PRIMARY KEY,data TEXT NOT NULL)''')
+        """CREATE TABLE IF NOT EXISTS test_table(id INTEGER PRIMARY KEY,data TEXT NOT NULL)"""
+    )
     # 插入测试数据
-    cursor.execute("INSERT INTO test_table (data) VALUES (?)",
-                   ('内存数据库测试数据',))
+    cursor.execute("INSERT INTO test_table (data) VALUES (?)", ("内存数据库测试数据",))
     conn.commit()
 
     # 验证数据
@@ -25,6 +25,6 @@ def create_in_memory_db():
     return conn
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     db_conn = create_in_memory_db()
     db_conn.close()

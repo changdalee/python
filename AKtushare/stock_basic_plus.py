@@ -1,15 +1,16 @@
 import io
 import sqlite3
 import sys
+from datetime import datetime
 from sqlite3 import OperationalError
+
 import numpy as np
 import pandas as pd
-from datetime import datetime
 
 
 def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press F9 to toggle the breakpoint.
+    print(f"Hi, {name}")  # Press F9 to toggle the breakpoint.
 
 
 def df_to_sqlite(df, table_name, db_name, if_exists, index=False):
@@ -26,12 +27,12 @@ def df_to_sqlite(df, table_name, db_name, if_exists, index=False):
     try:
         # 连接到SQLite数据库（如果不存在则创建）
         conn = sqlite3.connect(db_name)
-        '''
+        """
         c = conn.cursor()
         print("数据库打开成功")
         c.execute("DELETE * from {table_name}")
         conn.commit()
-        '''
+        """
         # 将DataFrame写入SQLite表
         df.to_sql(name=table_name, con=conn, if_exists=if_exists, index=index)
 
@@ -51,9 +52,10 @@ def df_to_sqlite(df, table_name, db_name, if_exists, index=False):
 
 
 # Press the green button in the gutter to run the script.
-if __name__ == '__main__':
+if __name__ == "__main__":
     sys.stdout = io.TextIOWrapper(
-        sys.stdout.buffer, encoding="utf8")  # 强制标准输出UTF-8编码
+        sys.stdout.buffer, encoding="utf8"
+    )  # 强制标准输出UTF-8编码
     # 对pandas配置，列名与数据对其显示
     pd.set_option("display.unicode.ambiguous_as_wide", True)
     pd.set_option("display.unicode.east_asian_width", True)
@@ -61,9 +63,9 @@ if __name__ == '__main__':
     pd.set_option("display.max_columns", None)
     # 显示所有行
     # pd.set_option('display.max_rows', None)
-    db_path = r'D:\develops\aktushare.db'
+    db_path = r"D:\develops\aktushare.db"
 
-    print_hi('PyCharm')
+    print_hi("PyCharm")
 
     # 连接数据库:ml-citation{ref="3,6" data="citationList"}
     conn = sqlite3.connect(db_path)
@@ -73,19 +75,21 @@ if __name__ == '__main__':
     rows = cursor.fetchall()  # 获取所有结果:ml-citation{ref="6" data="citationList"}
     conn.close()  # 关闭连接:ml-citation{ref="8" data="citationList"}
     df = pd.DataFrame(rows, columns=["code", "name"])
-    df['ak_code'] = df['code']
-    df['tu_code'] = np.where((df['code'] >= '600000'),
-                             (df['code'] + '.SH'), (df['code'] + '.SZ'))
-    df['bao_code'] = np.where(df['code'] >= '600000',
-                              'sh.' + df['code'], 'sz.' + df['code'])
+    df["ak_code"] = df["code"]
+    df["tu_code"] = np.where(
+        (df["code"] >= "600000"), (df["code"] + ".SH"), (df["code"] + ".SZ")
+    )
+    df["bao_code"] = np.where(
+        df["code"] >= "600000", "sh." + df["code"], "sz." + df["code"]
+    )
 
     print("\n" + "&" * 99 + "\n")
-    df = pd.DataFrame(
-        df, columns=["code", "name", "ak_code", "tu_code", "bao_code"])
+    df = pd.DataFrame(df, columns=["code", "name", "ak_code", "tu_code", "bao_code"])
     today = datetime.now().strftime("%Y%m%d")
-    df['date'] = today
+    df["date"] = today
     print(df)
 
     # 存储到SQLite数据库
-    df_to_sqlite(df=df, table_name='stock_basic_plus',
-                 db_name=db_path, if_exists='replace')
+    df_to_sqlite(
+        df=df, table_name="stock_basic_plus", db_name=db_path, if_exists="replace"
+    )

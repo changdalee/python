@@ -1,8 +1,9 @@
 import sqlite3
+from datetime import timedelta
 from sqlite3 import OperationalError
-from datetime import date, datatime, timedelta
-from chinese_calendar import is_workday, is_holiday
+
 import pandas as pd
+from chinese_calendar import is_workday
 
 
 def print_hi(name):
@@ -57,7 +58,7 @@ if __name__ == "__main__":
     pd.set_option("display.max_columns", None)
     # 显示所有行
     pd.set_option("display.max_rows", None)
-    db_path = r'D:\develops\aktushare.db'
+    db_path = r"D:\develops\aktushare.db"
 
     print_hi("PyCharm")
 
@@ -83,9 +84,7 @@ if __name__ == "__main__":
     # print(df)
 
     # 存储到SQLite数据库
-    df_to_sqlite(
-        df=df, table_name="stock_days", db_name=db_path, if_exists="replace"
-    )
+    df_to_sqlite(df=df, table_name="stock_days", db_name=db_path, if_exists="replace")
 
     conn = sqlite3.connect(
         db_path

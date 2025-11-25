@@ -1,13 +1,14 @@
 # import akshare as ak
-import tushare as ts
-import pandas as pd
-import time
-import sqlite3
-from sqlite3 import OperationalError
-from datetime import datetime
 import io
-import sys
 import os
+import sqlite3
+import sys
+import time
+from datetime import datetime
+from sqlite3 import OperationalError
+
+import pandas as pd
+import tushare as ts
 
 
 def print_hi(name):
@@ -47,7 +48,7 @@ def df_to_sqlite(df, table_name, db_name, if_exists, index=False):
         return False
 
 
-def export_to_ths_txt(df, group_name='myselect_stocks'):
+def export_to_ths_txt(df, group_name="myselect_stocks"):
     """导出为同花顺TXT格式"""
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     filename = f"{group_name}_{timestamp}.txt"
@@ -58,10 +59,10 @@ def export_to_ths_txt(df, group_name='myselect_stocks'):
     formatted_codes = df["code"]
 
     # 同花顺标准格式：每行一个6位股票代码
-    with open(filepath, 'w', encoding='gbk') as f:  # 重要：使用GBK编码
-        f.write('代码    \n')
+    with open(filepath, "w", encoding="gbk") as f:  # 重要：使用GBK编码
+        f.write("代码    \n")
         for code in formatted_codes:
-            f.write(code + '    \n')
+            f.write(code + "    \n")
 
     print(f"✅ 成功导出 {len(formatted_codes)} 只股票到: {filepath}")
     return filepath
@@ -79,7 +80,7 @@ if __name__ == "__main__":
     # 显示所有行
     # pd.set_option('display.max_rows', None)
 
-    db_path = r'D:\develops\aktushare.db'
+    db_path = r"D:\develops\aktushare.db"
     token = "055680ead4592f1287876ef50197e46a76516c86268a33b8c0c565b0"
     ts.set_token(token)
     # print(ts.__version__)
@@ -101,7 +102,7 @@ if __name__ == "__main__":
     current_hour = datetime.now().hour
     print("current_hour=", current_hour)
     daybefore1 = df_days["days"].iloc[-1]
-    #print("daybefore1=", daybefore1)
+    # print("daybefore1=", daybefore1)
     if daybefore1 == today and current_hour < 17:
         daybefore1 = df_days["days"].iloc[-2]
         daybefore2 = df_days["days"].iloc[-3]
@@ -232,8 +233,8 @@ if __name__ == "__main__":
             "close_bf4": "close_bf4",
         }
     )
-    df['PE_ratio'] = 0
-    df['date'] = today
+    df["PE_ratio"] = 0
+    df["date"] = today
     print("\n" + "$" * 80 + "\n")
     print(df)
     # 存储到SQLite数据库

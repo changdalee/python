@@ -1,14 +1,15 @@
 # import akshare as ak
-import tushare as ts
+import io
+import os
+import sqlite3
+import sys
+import time
+from datetime import datetime
+from sqlite3 import OperationalError
+
 import baostock as bs
 import pandas as pd
-import time
-import sqlite3
-from sqlite3 import OperationalError
-from datetime import datetime
-import io
-import sys
-import os
+import tushare as ts
 
 
 def print_hi(name):
@@ -48,7 +49,7 @@ def df_to_sqlite(df, table_name, db_name, if_exists, index=False):
         return False
 
 
-def export_to_ths_txt(df, group_name='myselect_stocks'):
+def export_to_ths_txt(df, group_name="myselect_stocks"):
     """导出为同花顺TXT格式"""
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     filename = f"{group_name}_{timestamp}.txt"
@@ -59,17 +60,18 @@ def export_to_ths_txt(df, group_name='myselect_stocks'):
     formatted_codes = df["code"]
 
     # 同花顺标准格式：每行一个6位股票代码
-    with open(filepath, 'w', encoding='gbk') as f:  # 重要：使用GBK编码
-        f.write('代码    \n')
+    with open(filepath, "w", encoding="gbk") as f:  # 重要：使用GBK编码
+        f.write("代码    \n")
         for code in formatted_codes:
-            f.write(code + '    \n')
+            f.write(code + "    \n")
 
     print(f"✅ 成功导出 {len(formatted_codes)} 只股票到: {filepath}")
     return filepath
 
 
-def robust_query_history_k_data(code, fields, start_date, end_date,
-                                frequency="d", adjustflag="3", max_retries=3):
+def robust_query_history_k_data(
+    code, fields, start_date, end_date, frequency="d", adjustflag="3", max_retries=3
+):
     """带错误处理和重试的查询函数"""
 
     for attempt in range(max_retries):
@@ -80,11 +82,11 @@ def robust_query_history_k_data(code, fields, start_date, end_date,
                 start_date=start_date,
                 end_date=end_date,
                 frequency=frequency,
-                adjustflag=adjustflag
+                adjustflag=adjustflag,
             )
 
-            if rs.error_code != '0':
-                print(f"第{attempt+1}次尝试失败: {rs.error_msg}")
+            if rs.error_code != "0":
+                print(f"第{attempt + 1}次尝试失败: {rs.error_msg}")
                 if attempt < max_retries - 1:
                     time.sleep(2)  # 等待2秒后重试
                     continue
@@ -92,7 +94,7 @@ def robust_query_history_k_data(code, fields, start_date, end_date,
                     return None
 
             data_list = []
-            while (rs.error_code == '0') & rs.next():
+            while (rs.error_code == "0") & rs.next():
                 data_list.append(rs.get_row_data())
 
             if data_list:
@@ -103,7 +105,7 @@ def robust_query_history_k_data(code, fields, start_date, end_date,
                 return pd.DataFrame()
 
         except Exception as e:
-            print(f"第{attempt+1}次尝试异常: {e}")
+            print(f"第{attempt + 1}次尝试异常: {e}")
             if attempt < max_retries - 1:
                 time.sleep(2)
                 continue
@@ -118,7 +120,7 @@ def complete_kdata_workflow(stock_codes, start_date, end_date, save_to_file=None
 
     # 登录
     lg = bs.login()
-    if lg.error_code != '0':
+    if lg.error_code != "0":
         print(f"登录失败: {lg.error_msg}")
         return None
 
@@ -132,7 +134,7 @@ def complete_kdata_workflow(stock_codes, start_date, end_date, save_to_file=None
                 code=code,
                 fields="date,code,open,high,low,close,volume,amount,pctChg,turn,peTTM,pbMRQ",
                 start_date=start_date,
-                end_date=end_date
+                end_date=end_date,
             )
 
             if df is not None and not df.empty:
@@ -146,18 +148,27 @@ def complete_kdata_workflow(stock_codes, start_date, end_date, save_to_file=None
         combined_df = pd.concat(all_data, ignore_index=True)
 
         # 数据清洗和转换
-        numeric_columns = ['open', 'high', 'low', 'close', 'volume', 'amount',
-                           'pctChg', 'turn', 'peTTM', 'pbMRQ']
+        numeric_columns = [
+            "open",
+            "high",
+            "low",
+            "close",
+            "volume",
+            "amount",
+            "pctChg",
+            "turn",
+            "peTTM",
+            "pbMRQ",
+        ]
         for col in numeric_columns:
-            combined_df[col] = pd.to_numeric(combined_df[col], errors='coerce')
+            combined_df[col] = pd.to_numeric(combined_df[col], errors="coerce")
 
-        combined_df['date'] = pd.to_datetime(combined_df['date'])
-        combined_df = combined_df.sort_values(
-            ['code', 'date']).reset_index(drop=True)
+        combined_df["date"] = pd.to_datetime(combined_df["date"])
+        combined_df = combined_df.sort_values(["code", "date"]).reset_index(drop=True)
 
         # 保存到文件
         if save_to_file:
-            combined_df.to_csv(save_to_file, index=False, encoding='utf-8-sig')
+            combined_df.to_csv(save_to_file, index=False, encoding="utf-8-sig")
             print(f"数据已保存到: {save_to_file}")
 
         print(f"工作流程完成，共处理 {len(combined_df)} 条数据")
@@ -181,7 +192,7 @@ if __name__ == "__main__":
     # 显示所有行
     # pd.set_option('display.max_rows', None)
 
-    db_path = r'D:\develops\aktushare.db'
+    db_path = r"D:\develops\aktushare.db"
     token = "055680ead4592f1287876ef50197e46a76516c86268a33b8c0c565b0"
     ts.set_token(token)
     # print(ts.__version__)
@@ -189,7 +200,7 @@ if __name__ == "__main__":
     print_hi("PyCharm")
 
     today = datetime.now().strftime("%Y%m%d")
-    db_path = r'D:\develops\aktushare.db'
+    db_path = r"D:\develops\aktushare.db"
     conn = sqlite3.connect(
         db_path
     )  # 连接数据库:ml-citation{ref="3,6" data="citationList"}
@@ -320,7 +331,8 @@ if __name__ == "__main__":
         }
     )
     df["bao_code"] = df["code"].apply(
-        lambda x: "sh."+x if x.startswith("6") else "sz."+x)
+        lambda x: "sh." + x if x.startswith("6") else "sz." + x
+    )
     list_code = df["bao_code"].tolist()
     # 使用完整工作流程
     stock_codes = list_code
@@ -331,17 +343,16 @@ if __name__ == "__main__":
         stock_codes=stock_codes,
         start_date=start_date,
         end_date=end_date,
-        save_to_file="stock_data.csv"
+        save_to_file="stock_data.csv",
     )
 
     if result_df is not None:
         print("\n数据概览:")
         print(result_df.info())
-        print(
-            f"\n数据时间范围: {result_df['date'].min()} 到 {result_df['date'].max()}")
+        print(f"\n数据时间范围: {result_df['date'].min()} 到 {result_df['date'].max()}")
 
-    df['PE_ratio'] = result_df['peTTM']
-    df['date'] = start_date
+    df["PE_ratio"] = result_df["peTTM"]
+    df["date"] = start_date
     df = df.drop(df[df["PE_ratio"] < 1].index)
     df = df.drop(df[df["PE_ratio"] > 20].index)
     print("\n" + "$" * 80 + "\n")

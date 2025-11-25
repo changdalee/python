@@ -1,9 +1,10 @@
-import tushare as ts
-import pandas as pd
 import sqlite3
-from sqlite3 import OperationalError
 import time
-from datetime import date, timedelta, datetime
+from datetime import datetime, timedelta
+from sqlite3 import OperationalError
+
+import pandas as pd
+import tushare as ts
 
 
 def print_hi(name):
@@ -77,7 +78,7 @@ if __name__ == "__main__":
     ts.set_token(token)
     # print(ts.__version__)
 
-    db_path = r'D:\develops\aktushare.db'
+    db_path = r"D:\develops\aktushare.db"
 
     print_hi("PyCharm")
 
