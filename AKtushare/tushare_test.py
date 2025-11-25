@@ -6,6 +6,8 @@ import time
 from datetime import date, timedelta, datetime
 import sys
 import io
+import akshare as ak
+
 
 if __name__ == "__main__":
     sys.stdout = io.TextIOWrapper(
@@ -34,3 +36,5 @@ if __name__ == "__main__":
     print("Python默认编码:", sys.getdefaultencoding())  # 输出应为'utf-8'
 
     print("Python标准输出编码:", sys.stdout.encoding)  # 应为'utf-8'
+
+    print(f"akshare版本: {ak.__version__}")
