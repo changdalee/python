@@ -1,7 +1,12 @@
+import io
 import sqlite3
+import sys
+import time
+from datetime import datetime
 from sqlite3 import OperationalError
 
 import pandas as pd
+import tushare as ts
 
 
 def print_hi(name):
@@ -26,7 +31,7 @@ def df_to_sqlite(df, table_name, db_name, if_exists, index=False):
         """
         c = conn.cursor()
         print("数据库打开成功")
-        c.execute("DELETE * from {table_name}")
+        c.execute("DELETE from {table_name};")
         conn.commit()
         """
         # 将DataFrame写入SQLite表
@@ -47,8 +52,25 @@ def df_to_sqlite(df, table_name, db_name, if_exists, index=False):
         return False
 
 
-# Press the green button in the gutter to run the script.
+def get_daily(self, ts_code="", trade_date="", start_date="", end_date=""):
+    for _ in range(3):
+        # try:
+        if trade_date:
+            df = self.pro.daily(ts_code=ts_code, trade_date=trade_date)
+        else:
+            df = self.pro.daily(
+                ts_code=ts_code, start_date=start_date, end_date=end_date
+            )
+            # except TypeError:
+            time.sleep(1)
+    # else:
+    #        return df
+
+
 if __name__ == "__main__":
+    sys.stdout = io.TextIOWrapper(
+        sys.stdout.buffer, encoding="utf8"
+    )  # 强制标准输出UTF-8编码
     # 对pandas配置，列名与数据对其显示
     pd.set_option("display.unicode.ambiguous_as_wide", True)
     pd.set_option("display.unicode.east_asian_width", True)
@@ -56,21 +78,61 @@ if __name__ == "__main__":
     pd.set_option("display.max_columns", None)
     # 显示所有行
     # pd.set_option('display.max_rows', None)
+
     db_path = r"D:\\develops\\aktushare.db"
+    token = "055680ead4592f1287876ef50197e46a76516c86268a33b8c0c565b0"
+    ts.set_token(token)
+    # print(ts.__version__)
 
     print_hi("PyCharm")
 
-    # 连接数据库:ml-citation{ref="3,6" data="citationList"}
-    conn = sqlite3.connect(db_path)
+    today = datetime.now().strftime("%Y%m%d")
+    # today = '20250721'
+
+    pro = ts.pro_api()
+    df = pro.daily(trade_date=today)
+    print(df)
+    print("00000000000000000---------------------------------------------------")
+
+    df["code"] = df["ts_code"].apply(lambda x: x[:6])
+
+    conn = sqlite3.connect(
+        db_path
+    )  # 连接数据库:ml-citation{ref="3,6" data="citationList"}
     cursor = conn.cursor()
-    # 执行查询:ml-citation{ref="10" data="citationList"}
-    cursor.execute("SELECT * FROM stock_basic_plus")
+    cursor.execute(
+        "SELECT * FROM stock_basic_plus"
+    )  # 执行查询:ml-citation{ref="10" data="citationList"}
     rows = cursor.fetchall()  # 获取所有结果:ml-citation{ref="6" data="citationList"}
     conn.close()  # 关闭连接:ml-citation{ref="8" data="citationList"}
-    df = pd.DataFrame(
-        rows, columns=["code", "name", "ak_code", "tu_code", "bao_code", "date"]
-    )
-    df.drop(columns=["ak_code", "tu_code", "bao_code", "date"], inplace=True)
+    df_name = pd.DataFrame(rows, columns=["code", "name"])
+    # print(df_name)
+    df = pd.merge(df, df_name, on="code", how="left")
+    df = df[
+        df["name"].apply(
+            lambda x: "ST" not in str(x)
+            and "*ST" not in str(x)
+            and "PT" not in str(x)
+            and "退" not in str(x)
+        )
+    ]
+    df = df[df["code"].apply(lambda x: not str(x) > "687999")]
     print(df)
+
+    df = df[
+        [
+            "code",
+            "name",
+        ]
+    ]
+    print(df)
+    print("\n" + "_" * 80 + "\n")
+
     # 存储到SQLite数据库
-    df_to_sqlite(df=df, table_name="stock_basic", db_name=db_path, if_exists="replace")
+    df_to_sqlite(
+        df=df,
+        table_name="stock_basic_tushare",
+        db_name=db_path,
+        if_exists="replace",
+    )
+    print("全部完成")
