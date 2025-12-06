@@ -56,6 +56,10 @@ def export_to_ths_txt(df, group_name="myselect_stocks"):
     current_path = "D:\\"
     filepath = os.path.join(current_path, filename)
     print(f"正在导出文件到: {filepath}...")
+    for i in range(len(df)):
+        code_change = df.at[i, "code"]
+        if code_change >= "300000" and code_change < "600000":
+            df.at[i, "code"] = "999999"
     formatted_codes = df["code"]
 
     # 同花顺标准格式：每行一个6位股票代码
@@ -129,9 +133,9 @@ if __name__ == "__main__":
 
     df = pd.merge(df_bf1, df_bf2, on="ts_code", how="left")
     df = pd.merge(df, df_bf3, on="ts_code", how="left")
-    df["up_15%"] = (df["close_bf1"] - df["close_bf3"]) / df["close_bf3"] * 100
-    df = df[df["up_15%"] > 15]
-    df["up_15%"] = df["up_15%"].map("{:,.2f}".format)
+    df["up_18%"] = (df["close_bf1"] - df["close_bf3"]) / df["close_bf3"] * 100
+    df = df[df["up_18%"] > 18]
+    df["up_18%"] = df["up_18%"].map("{:,.2f}".format)
     df["code"] = df["ts_code"].str[:6]
     df = df[df["code"] < "688000"]
     print(df)
@@ -166,7 +170,7 @@ if __name__ == "__main__":
             "close_bf1",
             "close_bf2",
             "close_bf3",
-            "up_15%",
+            "up_18%",
             "code",
             "name",
         ]
@@ -178,7 +182,7 @@ if __name__ == "__main__":
             "close_bf1": "close_bf1",
             "close_bf2": "close_bf2",
             "close_bf3": "close_bf3",
-            "up_15%": "up_15%",
+            "up_18%": "up_18%",
             "code": "code",
             "name": "name",
         }
@@ -188,7 +192,7 @@ if __name__ == "__main__":
     # 存储到SQLite数据库
     df_to_sqlite(
         df=df,
-        table_name="tushare_select_3days_up_15%",
+        table_name="tushare_select_3days_up_18%",
         db_name=db_path,
         if_exists="replace",
     )
