@@ -101,18 +101,18 @@ if __name__ == "__main__":
     current_hour = datetime.now().hour
     print("current_hour=", current_hour)
     daybefore1 = df_days["days"].iloc[-1]
-    # print("daybefore1=", daybefore1)
+    print("daybefore1=", daybefore1)
     if daybefore1 == today and current_hour > 17:
-        daybefore2 = df_days["days"].iloc[-2]
+        daybefore2 = df_days["days"].iloc[-1]
     else:
-        daybefore1 = df_days["days"].iloc[-2]
-        daybefore2 = df_days["days"].iloc[-3]
+        daybefore1 = df_days["days"].iloc[-1]
+        daybefore2 = df_days["days"].iloc[-2]
 
     pro = ts.pro_api()
     df_daybf1 = pro.daily(trade_date=daybefore1).fillna(0)
-    # print("daybefore1=", daybefore1)
+    print("daybefore1=", daybefore1)
     df_daybf2 = pro.daily(trade_date=daybefore2).fillna(0)
-    # print("daybefore2=", daybefore2)
+    print("daybefore2=", daybefore2)
 
     df1 = df_daybf1[["ts_code", "close"]]
     df1.columns = ["ts_code", "close_bf1"]
